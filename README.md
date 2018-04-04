@@ -45,19 +45,19 @@ Time obj is initialized but not used (should be updated from the timer event)
 	- [x] incrementSeconds()
 
 #### AudioManager
- - [ ] AudioManager
-	- [ ] audioManager()
-	- [ ] addSongs()
+ - [x] AudioManager
+	- [x] audioManager()
+	- [x] addSongs()
 	- [x] loadSong()
 	- [x] playSong()
 	- [x] pauseSong()
-	- [ ] playPauseSong()
+	- [x] playPauseSong()
 	- [x] nextSong()
 	- [x] previousSong()
 	- [ ] getNextSong()
 	- [ ] getPreviousSong()
-	- [ ] volumeUp()
-	- [ ] volumeDown()
+	- [x] volumeUp()
+	- [x] volumeDown()
 
 #### Song
  - [x] Song
