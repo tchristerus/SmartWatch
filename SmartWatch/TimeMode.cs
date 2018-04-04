@@ -12,6 +12,7 @@ namespace SmartWatch
     {
         public int currentCase { get; set; }
         public Time time { get; set; }
+        private TimeManager timeManager;
 
         private Label lbl_Time;
 
@@ -19,6 +20,7 @@ namespace SmartWatch
         public void Mode(Time time)
         {
             this.time = time;
+            this.timeManager = new TimeManager(time);
         }
 
         // Action on current mode
@@ -26,11 +28,11 @@ namespace SmartWatch
         {
             if (currentCase == 0) // Increment minutes mode
             {
-                this.time.incrementMinutes();
+                this.timeManager.incrementMinutes();
             }
             else
             {
-                this.time.incrementHours();
+                this.timeManager.incrementHours();
             }
             DisplayTime();
         }
@@ -64,8 +66,8 @@ namespace SmartWatch
 
         public void DisplayTime()
         {
-            string hours = (currentCase == 1) ? ">" + this.time.getHours : this.time.getHours.ToString();
-            string minutes = (currentCase == 0) ? this.time.getMinutes + "<" : this.time.getMinutes.ToString();
+            string hours = (currentCase == 1) ? ">" + this.timeManager.getHours : this.timeManager.getHours.ToString();
+            string minutes = (currentCase == 0) ? this.timeManager.getMinutes + "<" : this.timeManager.getMinutes.ToString();
             this.lbl_Time.Text = $@"{hours}:{minutes}";
         }
     }

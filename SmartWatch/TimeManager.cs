@@ -15,22 +15,24 @@ namespace SmartWatch
             this.time = time;
         }
 
-        public void IncrementHours()
+        public void incrementHours()
         {
-            throw new NotImplementedException();
+            this.time.incrementHours();
         }
 
-        public void IncrementMinutes()
+        public void incrementMinutes()
         {
-            throw new NotImplementedException();
+            this.time.incrementMinutes();
 
         }
 
-        public void IncrementSeconds()
+        public void incrementSeconds()
         {
-            throw new NotImplementedException();
+            this.incrementSeconds();
         }
-        
 
+        public int getSeconds => this.time.getSeconds;
+        public int getMinutes => this.time.getMinutes;
+        public int getHours => this.time.getHours;
     }
 }
