@@ -13,19 +13,21 @@ namespace SmartWatch
         private string title;
 
         public Song(string path, string artist, string title) {
-
+            this.path = path;
+            this.artist = artist;
+            this.title = title;
         }
         
         public string getPath() {
-            throw new NotImplementedException();
+            return path;
         }
 
         public string getTitle() {
-            throw new NotImplementedException();
+            return title;
         }
 
         public string getArtist() {
-            throw new NotImplementedException();
+            return artist;
         }
     }
 }
