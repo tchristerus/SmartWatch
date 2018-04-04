@@ -47,24 +47,24 @@ Time obj is initialized but not used (should be updated from the timer event)
 #### AudioManager
  - [ ] AudioManager
 	- [ ] audioManager()
-	- [ ] addSongs()
-	- [ ] loadSong()
-	- [ ] playSong()
-	- [ ] pauseSong()
-	- [ ] playPauseSong()
-	- [ ] nextSong()
-	- [ ] previousSong()
+	- [_] addSongs()
+	- [x] loadSong()
+	- [x] playSong()
+	- [x] pauseSong()
+	- [_] playPauseSong()
+	- [x] nextSong()
+	- [x] previousSong()
 	- [ ] getNextSong()
 	- [ ] getPreviousSong()
 	- [ ] volumeUp()
 	- [ ] volumeDown()
 
 #### Song
- - [ ] Song
-	- [ ] Song (string path, string artist, string title)
-	- [ ] getPath()
-	- [ ] getTitle()
-	- [ ] getArtist()
+ - [x] Song
+	- [x] Song (string path, string artist, string title)
+	- [x] getPath()
+	- [x] getTitle()
+	- [x] getArtist()
 
 #### TimeManager
  - [x] TimeManager
