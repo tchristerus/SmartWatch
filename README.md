@@ -22,12 +22,12 @@ Time obj is initialized but not used (should be updated from the timer event)
 #### ModeHandler
  - [ ] ModeHandler
 	- [ ] ModeHandler(Panel modePanel) // Not loading in first mode yet
-	- [ ] nextMode()
+	- [x] nextMode()
 	- [x] getCurrentMode()
-	- [ ] tick()
-	- [ ] buttonOnePressed()
-	- [ ] buttonTwoPressed()
-	- [ ] buttonBothPressed()
+	- [x] tick()
+	- [x] buttonOnePressed()
+	- [x] buttonTwoPressed()
+	- [x] buttonBothPressed()
 
 #### IMode
  - [x] IMode
@@ -39,10 +39,10 @@ Time obj is initialized but not used (should be updated from the timer event)
 	- [x] switchCase()
 
 #### Time
- - [ ] Time
-	- [ ] incrementHours(Time time)
-	- [ ] incrementMinutes()
-	- [ ] incrementSeconds()
+ - [x] Time
+	- [x] incrementHours(Time time)
+	- [x] incrementMinutes()
+	- [x] incrementSeconds()
 
 #### AudioManager
  - [ ] AudioManager
@@ -67,10 +67,10 @@ Time obj is initialized but not used (should be updated from the timer event)
 	- [ ] getArtist()
 
 #### TimeManager <i>((Not created yet))</i>
- - [ ] TimeManager
+ - [x] TimeManager
 
 #### TimeMode <i>((Not created yet))</i>
- - [ ] TimeMode
+ - [x] TimeMode
 
 #### AudioPlayerMode <i>((Not created yet))</i>
  - [ ] AudioPlayerMode
