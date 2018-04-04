@@ -17,8 +17,10 @@ namespace SmartWatch
             this.modePanel = modePanel;
 
             TimeMode timeMode = new TimeMode();
+            AudioPlayerMode audioPlayerMode = new AudioPlayerMode();
             timeMode.Mode(time);
             this.modes.Add(timeMode);
+            this.modes.Add(audioPlayerMode);
             this.currentMode = timeMode;
             timeMode.drawGui(modePanel);
         }
@@ -26,11 +28,12 @@ namespace SmartWatch
         private void nextMode() {
             int index = this.modes.IndexOf(currentMode);
 
-            if (index == this.modes.Count) {
+            if (index == this.modes.Count - 1) {
                 index = 0;
             }
 
             this.currentMode = this.modes[index + 1];
+            this.modePanel.Controls.Clear();
             this.currentMode.drawGui(this.modePanel);
         }
 

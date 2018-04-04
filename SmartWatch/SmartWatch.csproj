@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AudioManager.cs" />
+    <Compile Include="AudioPlayerMode.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
