@@ -13,18 +13,24 @@ namespace SmartWatch
         private int hours = 0;
         
         public void incrementHours() {
-            if (this.hours++ == 60)
+            if (this.hours++ == 23)
                 this.hours = 0;
         }
 
         public void incrementMinutes() {
-            if (this.minutes++ == 60)
+            if (this.minutes++ == 59)
+            {
                 this.minutes = 0;
+                this.incrementHours();
+            }
         }
 
         public void incrementSeconds() {
-            if (this.seconds++ == 60)
+            if (this.seconds++ == 59)
+            {
                 this.seconds = 0;
+                this.incrementMinutes();
+            }
         }
 
         public int getSeconds => this.seconds;

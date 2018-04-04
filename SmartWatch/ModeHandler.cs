@@ -30,7 +30,7 @@ namespace SmartWatch
                 index = 0;
             }
 
-            this.currentMode = this.modes[index = 1];
+            this.currentMode = this.modes[index + 1];
             this.currentMode.drawGui(this.modePanel);
         }
 

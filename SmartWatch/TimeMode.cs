@@ -13,46 +13,60 @@ namespace SmartWatch
         public int currentCase { get; set; }
         public Time time { get; set; }
 
-        private Label lbl_hours;
-        private Label lbl_minutes;
+        private Label lbl_Time;
+
         
         public void Mode(Time time)
         {
             this.time = time;
         }
 
+        // Action on current mode
         public void buttonOne()
         {
-            throw new NotImplementedException();
+            if (currentCase == 0) // Increment minutes mode
+            {
+                this.time.incrementMinutes();
+            }
+            else
+            {
+                this.time.incrementHours();
+            }
+            DisplayTime();
         }
 
+        // Change mode
         public void buttonTwo()
         {
-            throw new NotImplementedException();
+           switchCase();
         }
 
         public void switchCase()
         {
-            throw new NotImplementedException();
+            currentCase = (currentCase == 0) ? 1 : 0;
         }
 
         public void drawGui(Panel modePanel)
         {
-            lbl_hours = new Label();
-            lbl_hours.Text = time.getHours.ToString();
-            lbl_hours.Location = new Point(0,0);
-            modePanel.Controls.Add(lbl_hours);
+            lbl_Time = new Label();
+            lbl_Time.Location = new Point(0,0);
+            lbl_Time.Font = new Font("Arial", 15, FontStyle.Bold);
+            modePanel.Controls.Add(lbl_Time);
+            DisplayTime();
 
         }
 
         public void tick()
         {
-            throw new NotImplementedException();
+           this.time.incrementSeconds();
+           this.DisplayTime();
         }
 
         public void DisplayTime()
         {
-
+            string hours = (currentCase == 1) ? ">" + this.time.getHours : this.time.getHours.ToString();
+            string minutes = (currentCase == 0) ? this.time.getMinutes + "<" : this.time.getMinutes.ToString();
+            this.lbl_Time.Text = $@"{hours}:{minutes}";
         }
     }
 }
