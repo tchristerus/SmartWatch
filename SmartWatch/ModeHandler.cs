@@ -13,10 +13,14 @@ namespace SmartWatch
         private IMode currentMode;
         private Panel modePanel;
 
-        public ModeHandler(Panel modePanel) {
+        public ModeHandler(Time time, Panel modePanel) {
             this.modePanel = modePanel;
 
-            // TODO LOAD FIRST MODE
+            TimeMode timeMode = new TimeMode();
+            timeMode.Mode(time);
+            this.modes.Add(timeMode);
+            this.currentMode = timeMode;
+            timeMode.drawGui(modePanel);
         }
 
         private void nextMode() {

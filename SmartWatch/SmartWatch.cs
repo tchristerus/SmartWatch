@@ -19,8 +19,8 @@ namespace SmartWatch
             this.time = new Time();
 
             // Initializing ModeHandler
-            this.modeHandler = new ModeHandler(modePanel);
-
+            this.modeHandler = new ModeHandler(this.time, modePanel);
+            
             // Initializing timer
             this.timer = new Timer();
             this.timer.Interval = 1000; // 1 second
