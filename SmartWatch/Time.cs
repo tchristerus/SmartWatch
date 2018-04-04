@@ -8,24 +8,27 @@ namespace SmartWatch
 {
     class Time
     {
-        private int seconds;
-        private int minutes;
-        private int hours;
-
-        public Time() {
-
-        }
-
+        private int seconds = 0;
+        private int minutes = 0;
+        private int hours = 0;
+        
         public void incrementHours() {
-            throw new NotImplementedException();
+            if (this.hours++ == 60)
+                this.hours = 0;
         }
 
         public void incrementMinutes() {
-            throw new NotImplementedException();
+            if (this.minutes++ == 60)
+                this.minutes = 0;
         }
 
         public void incrementSeconds() {
-            throw new NotImplementedException();
+            if (this.seconds++ == 60)
+                this.seconds = 0;
         }
+
+        public int getSeconds { get; }
+        public int getMinutes { get; }
+        public int getHours { get; }
     }
 }

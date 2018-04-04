@@ -15,33 +15,41 @@ namespace SmartWatch
 
         public ModeHandler(Panel modePanel) {
             this.modePanel = modePanel;
+
+            // TODO LOAD FIRST MODE
         }
 
-        public void nextMode() {
-            throw new NotImplementedException();
+        private void nextMode() {
+            int index = this.modes.IndexOf(currentMode);
+
+            if (index == this.modes.Count) {
+                index = 0;
+            }
+
+            this.currentMode = this.modes[index = 1];
+            this.currentMode.drawGui(this.modePanel);
         }
 
         public IMode getCurrentMode() {
-            if(currentMode != null)
+            if(this.currentMode != null)
                 return this.currentMode;
             throw new NullReferenceException("Mode is null");
         }
 
         public void tick() {
-            throw new NotFiniteNumberException();
+            this.currentMode.tick();
         }
 
         public void buttonOneEvent() {
-            throw new NotImplementedException();
+            this.currentMode.buttonOne();
         }
 
         public void buttonTwoEvent() {
-            throw new NotImplementedException();
+            this.currentMode.buttonTwo();
         }
 
         public void bothButtonsEvent() {
-            throw new NotImplementedException();
+            this.nextMode();
         }
-    
     }
 }
