@@ -66,10 +66,10 @@ Time obj is initialized but not used (should be updated from the timer event)
 	- [ ] getTitle()
 	- [ ] getArtist()
 
-#### TimeManager <i>((Not created yet))</i>
+#### TimeManager
  - [x] TimeManager
 
-#### TimeMode <i>((Not created yet))</i>
+#### TimeMode
  - [x] TimeMode
 
 #### AudioPlayerMode <i>((Not created yet))</i>
