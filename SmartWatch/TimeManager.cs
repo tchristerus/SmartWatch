@@ -8,16 +8,16 @@ namespace SmartWatch
 {
     class TimeManager
     {
-        public TimeManger()
-        {
-            throw new NotImplementedException();
+        private Time time;
 
+        public TimeManager(Time time)
+        {
+            this.time = time;
         }
 
         public void IncrementHours()
         {
             throw new NotImplementedException();
-
         }
 
         public void IncrementMinutes()
@@ -30,6 +30,7 @@ namespace SmartWatch
         {
             throw new NotImplementedException();
         }
+        
 
     }
 }

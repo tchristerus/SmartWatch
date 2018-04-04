@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,17 +10,15 @@ namespace SmartWatch
 {
     class TimeMode : IMode
     {
-        public TimeMode()
-        {
-            var t = new Time();
-
-        }
-     
         public int currentCase { get; set; }
         public Time time { get; set; }
+
+        private Label lbl_hours;
+        private Label lbl_minutes;
+        
         public void Mode(Time time)
         {
-            throw new NotImplementedException();
+            this.time = time;
         }
 
         public void buttonOne()
@@ -39,7 +38,11 @@ namespace SmartWatch
 
         public void drawGui(Panel modePanel)
         {
-            throw new NotImplementedException();
+            lbl_hours = new Label();
+            lbl_hours.Text = time.getHours.ToString();
+            lbl_hours.Location = new Point(0,0);
+            modePanel.Controls.Add(lbl_hours);
+
         }
 
         public void tick()

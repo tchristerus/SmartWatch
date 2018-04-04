@@ -59,6 +59,8 @@
     <Compile Include="SmartWatch.cs" />
     <Compile Include="Song.cs" />
     <Compile Include="Time.cs" />
+    <Compile Include="TimeManager.cs" />
+    <Compile Include="TimeMode.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -27,8 +27,8 @@ namespace SmartWatch
                 this.seconds = 0;
         }
 
-        public int getSeconds { get; }
-        public int getMinutes { get; }
-        public int getHours { get; }
+        public int getSeconds => this.seconds;
+        public int getMinutes => this.minutes;
+        public int getHours => this.hours;
     }
 }
