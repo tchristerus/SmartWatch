@@ -47,11 +47,11 @@ Time obj is initialized but not used (should be updated from the timer event)
 #### AudioManager
  - [ ] AudioManager
 	- [ ] audioManager()
-	- [_] addSongs()
+	- [ ] addSongs()
 	- [x] loadSong()
 	- [x] playSong()
 	- [x] pauseSong()
-	- [_] playPauseSong()
+	- [ ] playPauseSong()
 	- [x] nextSong()
 	- [x] previousSong()
 	- [ ] getNextSong()
