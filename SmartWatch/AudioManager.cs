@@ -24,7 +24,13 @@ namespace SmartWatch
         public AudioManager()
         {
             playing = false;
+            songs = new List<Song>();
             addSongs();
+        }
+
+        public void alertTest()
+        {
+            System.Windows.Forms.MessageBox.Show("WEKRT WEL");
         }
 
         // Adds songs with their path, artist and title to songs.
@@ -97,7 +103,7 @@ namespace SmartWatch
             // Cant go next if no song has been selected.
             if (currentSong == null)
                 return;
-            if (currentSongIndex == songs.Count) // Start at the beginning when at last song.
+            if (currentSongIndex == songs.Count - 1) // Start at the beginning when at last song.
             {
                 currentSongIndex = 0;
             }
@@ -118,7 +124,7 @@ namespace SmartWatch
                 return;
             if (currentSongIndex == 0) // Go to end of list when at beginning
             {
-                currentSongIndex = songs.Count + 1;
+                currentSongIndex = songs.Count - 1;
             }
             else
             {
@@ -140,5 +146,9 @@ namespace SmartWatch
             player.settings.volume = player.settings.volume - 10;
         }
 
+        public Song getCurrentSong()
+        {
+            return currentSong;
+        }
     }
 }

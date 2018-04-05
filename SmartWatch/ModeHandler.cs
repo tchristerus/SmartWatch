@@ -19,6 +19,7 @@ namespace SmartWatch
             TimeMode timeMode = new TimeMode();
             AudioPlayerMode audioPlayerMode = new AudioPlayerMode();
             timeMode.Mode(time);
+            audioPlayerMode.Mode(time);
             this.modes.Add(timeMode);
             this.modes.Add(audioPlayerMode);
             this.currentMode = timeMode;
