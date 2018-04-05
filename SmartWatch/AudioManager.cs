@@ -37,7 +37,11 @@ namespace SmartWatch
         public void addSongs()
         {
             Song song;
-            String path = @"D:\Documenten\GitHub\SmartWatch\SmartWatch\Songs\";
+            // For local direcotry:
+            //String path = @"D:\Documenten\GitHub\SmartWatch\SmartWatch\Songs\";
+            // For current directory:
+            String path = Environment.CurrentDirectory + @"\Songs\";
+            System.Windows.Forms.MessageBox.Show(path);
 
             song = new Song(path + "Macklemore  Ryan Lewis vs Major Lazer - Cant Hold Us Remix.mp3", "Macklemore & Ryan Lewis", "Can't Hold Us Remix");
             songs.Add(song);

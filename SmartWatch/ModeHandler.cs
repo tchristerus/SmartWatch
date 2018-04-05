@@ -29,11 +29,15 @@ namespace SmartWatch
         private void nextMode() {
             int index = this.modes.IndexOf(currentMode);
 
-            if (index == this.modes.Count - 1) {
+            if (index == this.modes.Count - 1)
+            {
                 index = 0;
             }
-
-            this.currentMode = this.modes[index + 1];
+            else
+            {
+                index++;
+            }
+            this.currentMode = this.modes[index ];
             this.modePanel.Controls.Clear();
             this.currentMode.drawGui(this.modePanel);
         }
