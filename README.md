@@ -1,6 +1,11 @@
 # SmartWatch
 C# Y2_P3_OGO SmartWatch exercise 
 
+## Howto
+To start the program go to the debug folder and double click SmartWatch\SmartWatch\bin\Debug\SmartWatch.exe.
+To switch mode press the "Both".
+Press button "2" to switch activity in current mode.
+Press button "1" to start activity.
 
 ### Todo / done
 
