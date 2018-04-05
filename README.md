@@ -17,16 +17,16 @@ Press button "1" to start activity.
 
 #### SmartWatch
 Time obj is initialized but not used (should be updated from the timer event)
- - [ ] SmartWatch
+ - [x] SmartWatch
 	- [x] SmartWatch(Panel modePanel)
-	- [ ] TimerTickEvent(Object myObject, EventArgs myEventArgs)
+	- [x] TimerTickEvent(Object myObject, EventArgs myEventArgs)
 	- [x] buttonOnePressed()
 	- [x] buttonTwoPressed()
 	- [x] buttonBothPressed()
 
 #### ModeHandler
- - [ ] ModeHandler
-	- [ ] ModeHandler(Panel modePanel) // Not loading in first mode yet
+ - [x] ModeHandler
+	- [x] ModeHandler(Panel modePanel)
 	- [x] nextMode()
 	- [x] getCurrentMode()
 	- [x] tick()
