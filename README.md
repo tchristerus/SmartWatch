@@ -73,4 +73,4 @@ Time obj is initialized but not used (should be updated from the timer event)
  - [x] TimeMode
 
 #### AudioPlayerMode <i>((Not created yet))</i>
- - [ ] AudioPlayerMode
+ - [x] AudioPlayerMode
